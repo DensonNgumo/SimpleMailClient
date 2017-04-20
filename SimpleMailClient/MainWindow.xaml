@@ -1,0 +1,30 @@
+﻿<Controls:MetroWindow x:Class="SimpleMailClient.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls"
+        Height="387.313" Width="620.522" Title="My Mail Client" Icon="MetroUI_Mail.png">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.2*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Label Content="To:" FontWeight="Bold" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Right"/>
+        <TextBox Name="txtRecipient" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Stretch"/>
+        <Label Content="From:" FontWeight="Bold" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Right"/>
+        <TextBox Name="txtSender" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Stretch"/>
+        <Label Content="Subject:" FontWeight="Bold" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Right"/>
+        <TextBox Name="txtSubject" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Stretch"/>
+        <Label Content="Body:" FontWeight="Bold" Grid.Column="0" Grid.Row="3" HorizontalAlignment="Right"/>
+        <TextBox Name="txtBody" TextWrapping="Wrap" Grid.Column="1" Grid.Row="3"  HorizontalContentAlignment="Stretch" ScrollViewer.VerticalScrollBarVisibility="Auto"/>
+        <Button Name="btnSend" Content="Send" Grid.Column="1" Grid.Row="4" HorizontalAlignment="Right" Width="80" Height="40" Click="btnSend_Click" />
+
+
+    </Grid>
+</Controls:MetroWindow>
